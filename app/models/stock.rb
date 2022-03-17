@@ -23,4 +23,17 @@ class Stock < ApplicationRecord
         end
 
     end
+
+
+
+
+
+
+
+    def self.check_db(ticker_symbol)
+        # return object with symbol if exists
+        where(ticker: ticker_symbol).first
+    end
+
+    
 end
